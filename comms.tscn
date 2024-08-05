@@ -1,0 +1,694 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4qg0pajx1reo"]
+
+[ext_resource type="Script" path="res://comms.gd" id="1_41m76"]
+[ext_resource type="FontFile" uid="uid://onwv1b6vwwk2" path="res://assets/fonts/OpenSans-Bold.ttf" id="2_hiip5"]
+[ext_resource type="FontFile" uid="uid://bjua31qxowstv" path="res://assets/fonts/FFFFORWA.TTF" id="2_j7oyw"]
+[ext_resource type="Texture2D" uid="uid://d2pbsu6ek1m5m" path="res://assets/apps/close.png" id="3_fg0e0"]
+[ext_resource type="Texture2D" uid="uid://d2h4c5ex3tsi7" path="res://assets/apps/comms/speakeron.png" id="3_yv442"]
+[ext_resource type="Texture2D" uid="uid://0f6m1ltkfv2" path="res://assets/apps/comms/speakeroff.png" id="4_xh42y"]
+[ext_resource type="Texture2D" uid="uid://e7nv0122r73h" path="res://assets/apps/comms/micon.png" id="5_dpmqu"]
+[ext_resource type="Texture2D" uid="uid://cnqurwr4kq0yy" path="res://assets/apps/comms/micoff.png" id="6_ivd07"]
+[ext_resource type="Texture2D" uid="uid://pbiqf5rifhhv" path="res://assets/apps/comms/dial.png" id="7_7xk0t"]
+[ext_resource type="Texture2D" uid="uid://dk87byenkwqu5" path="res://assets/apps/comms/hangup.png" id="7_ccrpy"]
+
+[node name="Comms" type="Control"]
+layout_mode = 3
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_41m76")
+metadata/_edit_horizontal_guides_ = [-93.0]
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 9
+
+[node name="1" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="31" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "l"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="15" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "e"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="33" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="8" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="43" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "l"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="16" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "j"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="34" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "g"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="24" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="6" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "n"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="32" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="17" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "c"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="23" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "v"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="42" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "n"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="9" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="35" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "v"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="25" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="7" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "l"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="19" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "l"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="26" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="18" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "n"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="36" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="44" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="27" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "e"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="30" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "n"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="37" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="10" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "g"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="28" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "j"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="4" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "j"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="12" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "k"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="40" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "j"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="11" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "v"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="41" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "c"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="20" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="45" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "e"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="14" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="29" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "c"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="13" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "z"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="38" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="5" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "c"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="21" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="39" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "e"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="22" type="Label" parent="GridContainer"]
+modulate = Color(0.2, 0.2, 0.2, 1)
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j7oyw")
+theme_override_font_sizes/font_size = 28
+text = "g"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Filter" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.392157)
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button1" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Incoming call"
+icon = ExtResource("3_yv442")
+expand_icon = true
+
+[node name="Padding" type="ColorRect" parent="HBoxContainer3"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Outgoing call"
+icon = ExtResource("7_7xk0t")
+icon_alignment = 2
+expand_icon = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Padding1" type="ColorRect" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Padding1" type="ColorRect" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+text = "[ENCRYPTED CALL]"
+flat = true
+clip_text = true
+
+[node name="TextEdit" type="TextEdit" parent="HBoxContainer2/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "[ENCRYPTED CALL]"
+scroll_fit_content_height = true
+
+[node name="Label" type="Label" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Padding2" type="ColorRect" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("4_xh42y")
+texture_pressed = ExtResource("3_yv442")
+texture_hover = ExtResource("4_xh42y")
+texture_disabled = ExtResource("4_xh42y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("5_dpmqu")
+texture_pressed = ExtResource("6_ivd07")
+texture_hover = ExtResource("5_dpmqu")
+texture_disabled = ExtResource("5_dpmqu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding4" type="ColorRect" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer2/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_7xk0t")
+texture_pressed = ExtResource("7_7xk0t")
+texture_hover = ExtResource("7_7xk0t")
+texture_disabled = ExtResource("7_7xk0t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_ccrpy")
+texture_pressed = ExtResource("7_ccrpy")
+texture_hover = ExtResource("7_ccrpy")
+texture_disabled = ExtResource("7_ccrpy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding3" type="ColorRect" parent="HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Padding2" type="ColorRect" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="WindowBarBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+color = Color(0.321569, 0.721569, 0.8, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+
+[node name="Padding1" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hiip5")
+text = "E2EE COMMUNICATOR"
+
+[node name="Padding2" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Close" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+texture_normal = ExtResource("3_fg0e0")
+texture_pressed = ExtResource("3_fg0e0")
+texture_hover = ExtResource("3_fg0e0")
+texture_disabled = ExtResource("3_fg0e0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding4" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="pressed" from="HBoxContainer3/Button1" to="." method="_on_button1_pressed"]
+[connection signal="pressed" from="HBoxContainer3/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="text_changed" from="HBoxContainer2/VBoxContainer/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer2/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/VBoxContainer/HBoxContainer2/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Close" to="." method="_on_close_pressed"]

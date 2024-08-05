@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://ohi6uknim4oa"]
+
+[ext_resource type="Script" path="res://chat.gd" id="1_v57a2"]
+[ext_resource type="FontFile" uid="uid://onwv1b6vwwk2" path="res://assets/fonts/OpenSans-Bold.ttf" id="2_tukqa"]
+[ext_resource type="Texture2D" uid="uid://dxv8jp8u0i0e1" path="res://assets/apps/chat/trash.png" id="3_6q8rn"]
+[ext_resource type="Texture2D" uid="uid://d2pbsu6ek1m5m" path="res://assets/apps/close.png" id="3_on22k"]
+
+[node name="Chat" type="Control"]
+layout_mode = 3
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v57a2")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "CHAT ROOM"
+flat = true
+
+[node name="TextEdit2" type="TextEdit" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "CHAT ROOM"
+scroll_fit_content_height = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+placeholder_text = "(user:)message"
+scroll_fit_content_height = true
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "SEND"
+
+[node name="WindowBarBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+color = Color(0.321569, 0.721569, 0.8, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+
+[node name="Padding1" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tukqa")
+text = "E2EE CHAT"
+
+[node name="Padding2" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Trash" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+texture_normal = ExtResource("3_6q8rn")
+texture_pressed = ExtResource("3_6q8rn")
+texture_hover = ExtResource("3_6q8rn")
+texture_disabled = ExtResource("3_6q8rn")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Close" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+texture_normal = ExtResource("3_on22k")
+texture_pressed = ExtResource("3_on22k")
+texture_hover = ExtResource("3_on22k")
+texture_disabled = ExtResource("3_on22k")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding4" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="text_changed" from="VBoxContainer/TextEdit2" to="." method="_on_text_edit_2_text_changed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_send_pressed"]
+[connection signal="pressed" from="HBoxContainer/Trash" to="." method="_on_trash_pressed"]
+[connection signal="pressed" from="HBoxContainer/Close" to="." method="_on_close_pressed"]

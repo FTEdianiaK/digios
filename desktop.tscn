@@ -1,0 +1,308 @@
+[gd_scene load_steps=25 format=3 uid="uid://miyyvba5spky"]
+
+[ext_resource type="Script" path="res://desktop.gd" id="1_ae0sb"]
+[ext_resource type="Texture2D" uid="uid://djivfva3ji23g" path="res://assets/desktop/Wallpaper1.jpg" id="2_adqub"]
+[ext_resource type="Texture2D" uid="uid://dc0384jswwivt" path="res://assets/desktop/processor.png" id="3_7xo7m"]
+[ext_resource type="Texture2D" uid="uid://bf7mvuik0cdfh" path="res://assets/desktop/Wallpaper2.jpg" id="3_hpfty"]
+[ext_resource type="Texture2D" uid="uid://bv5dmk7rpa6gm" path="res://assets/desktop/notebook.png" id="3_n2v4w"]
+[ext_resource type="Texture2D" uid="uid://co0hw8wk27mwb" path="res://assets/desktop/Wallpaper3.jpg" id="4_jgswf"]
+[ext_resource type="Texture2D" uid="uid://dg6v3xyvej5o1" path="res://assets/desktop/wallpaper.png" id="6_hxjmq"]
+[ext_resource type="PackedScene" uid="uid://d7v2ffyfgped" path="res://notepad.tscn" id="6_t2rf5"]
+[ext_resource type="Texture2D" uid="uid://1vgmkyaqmoos" path="res://assets/desktop/database.png" id="7_by8uj"]
+[ext_resource type="Texture2D" uid="uid://dxc3vkvjwk0lb" path="res://assets/apps/menu/shut-down.png" id="7_meen1"]
+[ext_resource type="Texture2D" uid="uid://b4ycjgtwnan6l" path="res://assets/desktop/comms.png" id="8_rtb8t"]
+[ext_resource type="Texture2D" uid="uid://bdrk4q8em4y82" path="res://assets/apps/menu/restart.png" id="8_uol8f"]
+[ext_resource type="Texture2D" uid="uid://c4nsl4yfywnv" path="res://assets/desktop/chat.png" id="9_q5qat"]
+[ext_resource type="Texture2D" uid="uid://c7vdrvl3iwxdo" path="res://assets/apps/menu/emergency.png" id="9_x8wbm"]
+[ext_resource type="Texture2D" uid="uid://d322slblx6hrl" path="res://assets/desktop/radar.png" id="10_ugqek"]
+[ext_resource type="Texture2D" uid="uid://cutxwc6n0l2m6" path="res://assets/desktop/hacker.png" id="11_1npxl"]
+[ext_resource type="PackedScene" uid="uid://md6x7bryutg6" path="res://wallpaper.tscn" id="12_mhp8k"]
+[ext_resource type="Texture2D" uid="uid://dcjaxuj6bfy3q" path="res://assets/desktop/pixel.png" id="12_oqltx"]
+[ext_resource type="PackedScene" uid="uid://cnn71qchbn324" path="res://database.tscn" id="13_fni7m"]
+[ext_resource type="PackedScene" uid="uid://c4qg0pajx1reo" path="res://comms.tscn" id="16_xh1ps"]
+[ext_resource type="PackedScene" uid="uid://ohi6uknim4oa" path="res://chat.tscn" id="17_qyb6d"]
+[ext_resource type="PackedScene" uid="uid://b256rltagayaq" path="res://radar.tscn" id="20_7x3t8"]
+[ext_resource type="PackedScene" uid="uid://brbehgq588b5x" path="res://hacker.tscn" id="21_w0su8"]
+[ext_resource type="PackedScene" uid="uid://bwn8yll1ji7vb" path="res://pixel.tscn" id="23_px4aw"]
+
+[node name="Desktop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ae0sb")
+
+[node name="Wallpaper1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_adqub")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Wallpaper2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hpfty")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Wallpaper3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_jgswf")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="QuickBG" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="QuickTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AppList" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.005
+anchor_top = 0.005
+anchor_right = 0.5
+anchor_bottom = 0.925
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="NotepadButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("3_n2v4w")
+texture_pressed = ExtResource("3_n2v4w")
+texture_hover = ExtResource("3_n2v4w")
+texture_disabled = ExtResource("3_n2v4w")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="WallpaperButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("6_hxjmq")
+texture_pressed = ExtResource("6_hxjmq")
+texture_hover = ExtResource("6_hxjmq")
+texture_disabled = ExtResource("6_hxjmq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DatabaseButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("7_by8uj")
+texture_pressed = ExtResource("7_by8uj")
+texture_hover = ExtResource("7_by8uj")
+texture_disabled = ExtResource("7_by8uj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CommsButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("8_rtb8t")
+texture_pressed = ExtResource("8_rtb8t")
+texture_hover = ExtResource("8_rtb8t")
+texture_disabled = ExtResource("8_rtb8t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ChatButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("9_q5qat")
+texture_pressed = ExtResource("9_q5qat")
+texture_hover = ExtResource("9_q5qat")
+texture_disabled = ExtResource("9_q5qat")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="RadarButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("10_ugqek")
+texture_pressed = ExtResource("10_ugqek")
+texture_hover = ExtResource("10_ugqek")
+texture_disabled = ExtResource("10_ugqek")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HackerButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("11_1npxl")
+texture_pressed = ExtResource("11_1npxl")
+texture_hover = ExtResource("11_1npxl")
+texture_disabled = ExtResource("11_1npxl")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="PixelButton" type="TextureButton" parent="AppList"]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture_normal = ExtResource("12_oqltx")
+texture_pressed = ExtResource("12_oqltx")
+texture_hover = ExtResource("12_oqltx")
+texture_disabled = ExtResource("12_oqltx")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TaskBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.321569, 0.721569, 0.8, 0.607843)
+
+[node name="TaskBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.925
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Padding1" type="ColorRect" parent="TaskBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="MenuButton" type="TextureButton" parent="TaskBar"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+texture_normal = ExtResource("3_7xo7m")
+texture_pressed = ExtResource("3_7xo7m")
+texture_hover = ExtResource("3_7xo7m")
+texture_disabled = ExtResource("3_7xo7m")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding2" type="ColorRect" parent="TaskBar"]
+visible = false
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ShutDown" type="TextureButton" parent="TaskBar"]
+visible = false
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture_normal = ExtResource("7_meen1")
+texture_pressed = ExtResource("7_meen1")
+texture_hover = ExtResource("7_meen1")
+texture_disabled = ExtResource("7_meen1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Restart" type="TextureButton" parent="TaskBar"]
+visible = false
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture_normal = ExtResource("8_uol8f")
+texture_pressed = ExtResource("8_uol8f")
+texture_hover = ExtResource("8_uol8f")
+texture_disabled = ExtResource("8_uol8f")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Emergency" type="TextureButton" parent="TaskBar"]
+visible = false
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture_normal = ExtResource("9_x8wbm")
+texture_pressed = ExtResource("9_x8wbm")
+texture_hover = ExtResource("9_x8wbm")
+texture_disabled = ExtResource("9_x8wbm")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding3" type="ColorRect" parent="TaskBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Notepad" parent="." instance=ExtResource("6_t2rf5")]
+visible = false
+layout_mode = 1
+
+[node name="Wallpaper" parent="." instance=ExtResource("12_mhp8k")]
+visible = false
+layout_mode = 1
+
+[node name="Database" parent="." instance=ExtResource("13_fni7m")]
+visible = false
+layout_mode = 1
+
+[node name="Comms" parent="." instance=ExtResource("16_xh1ps")]
+visible = false
+layout_mode = 1
+
+[node name="Chat" parent="." instance=ExtResource("17_qyb6d")]
+visible = false
+layout_mode = 1
+
+[node name="Radar" parent="." instance=ExtResource("20_7x3t8")]
+visible = false
+layout_mode = 1
+
+[node name="Hacker" parent="." instance=ExtResource("21_w0su8")]
+visible = false
+layout_mode = 1
+
+[node name="Pixel" parent="." instance=ExtResource("23_px4aw")]
+visible = false
+layout_mode = 1
+
+[connection signal="timeout" from="QuickTimer" to="." method="_on_quick_timer_timeout"]
+[connection signal="pressed" from="AppList/NotepadButton" to="." method="_on_notepad_button_pressed"]
+[connection signal="pressed" from="AppList/WallpaperButton" to="." method="_on_wallpaper_button_pressed"]
+[connection signal="pressed" from="AppList/DatabaseButton" to="." method="_on_database_button_pressed"]
+[connection signal="pressed" from="AppList/CommsButton" to="." method="_on_comms_button_pressed"]
+[connection signal="pressed" from="AppList/ChatButton" to="." method="_on_chat_button_pressed"]
+[connection signal="pressed" from="AppList/RadarButton" to="." method="_on_radar_button_pressed"]
+[connection signal="pressed" from="AppList/HackerButton" to="." method="_on_hacker_button_pressed"]
+[connection signal="pressed" from="AppList/PixelButton" to="." method="_on_pixel_button_pressed"]
+[connection signal="pressed" from="TaskBar/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="TaskBar/ShutDown" to="." method="_on_shut_down_pressed"]
+[connection signal="pressed" from="TaskBar/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="TaskBar/Emergency" to="." method="_on_emergency_pressed"]
+[connection signal="kill" from="Notepad" to="." method="_on_kill"]
+[connection signal="kill" from="Wallpaper" to="." method="_on_kill"]
+[connection signal="wallpaper" from="Wallpaper" to="." method="_on_wallpaper_wallpaper"]
+[connection signal="kill" from="Database" to="." method="_on_kill"]
+[connection signal="kill" from="Database" to="." method="_on_database_kill"]
+[connection signal="kill" from="Comms" to="." method="_on_kill"]
+[connection signal="kill" from="Chat" to="." method="_on_kill"]
+[connection signal="kill" from="Radar" to="." method="_on_kill"]
+[connection signal="kill" from="Hacker" to="." method="_on_kill"]
+[connection signal="kill" from="Pixel" to="." method="_on_kill"]

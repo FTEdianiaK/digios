@@ -1,0 +1,192 @@
+[gd_scene load_steps=13 format=3 uid="uid://cnn71qchbn324"]
+
+[ext_resource type="Script" path="res://database.gd" id="1_1oafc"]
+[ext_resource type="Texture2D" uid="uid://b3h4edgsmj03q" path="res://assets/apps/archive/connect.png" id="2_ehomf"]
+[ext_resource type="FontFile" uid="uid://crw5oly8ms6ri" path="res://assets/fonts/OpenSans-ExtraBold.ttf" id="2_nb4n3"]
+[ext_resource type="Texture2D" uid="uid://bk3r5cjnhjtbg" path="res://assets/apps/archive/database.png" id="3_bsk5m"]
+[ext_resource type="FontFile" uid="uid://onwv1b6vwwk2" path="res://assets/fonts/OpenSans-Bold.ttf" id="3_dbxe5"]
+[ext_resource type="Texture2D" uid="uid://d2pbsu6ek1m5m" path="res://assets/apps/close.png" id="4_3ulok"]
+[ext_resource type="Texture2D" uid="uid://d1fyn4wna7p2f" path="res://assets/apps/archive/index.png" id="4_4ltv8"]
+[ext_resource type="Texture2D" uid="uid://br0wuohnslvgq" path="res://assets/apps/archive/match.png" id="5_j07ab"]
+[ext_resource type="FontFile" uid="uid://dlqr7yaqbp3bv" path="res://assets/fonts/OpenSans-Regular.ttf" id="7_e2071"]
+[ext_resource type="FontFile" uid="uid://dhihbiygd7qlm" path="res://assets/fonts/OpenSans-Semibold.ttf" id="7_k6hx2"]
+[ext_resource type="FontFile" uid="uid://gwcpcgvtp3cq" path="res://assets/fonts/joystix.monospace-regular.otf" id="8_clkc4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8u2a"]
+bg_color = Color(0.329412, 0.329412, 0.329412, 1)
+
+[node name="Database" type="Control"]
+layout_mode = 3
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.85
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1oafc")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Content" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Connect" type="TextureRect" parent="Content/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_ehomf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Database" type="TextureRect" parent="Content/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_bsk5m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Index" type="TextureRect" parent="Content/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_4ltv8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Match" type="TextureRect" parent="Content/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_j07ab")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="Content/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.607843, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Content/VBoxContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_nb4n3")
+theme_override_font_sizes/font_size = 18
+text = "ENSURING SECURE CONNECTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Padding1" type="ColorRect" parent="Content/VBoxContainer2"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="Content/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.15
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
+theme_override_fonts/font = ExtResource("7_k6hx2")
+theme_override_font_sizes/font_size = 12
+placeholder_text = "Enter search term..."
+scroll_fit_content_height = true
+
+[node name="Class" type="Label" parent="Content/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.658824, 0.658824, 0.658824, 1)
+theme_override_fonts/font = ExtResource("8_clkc4")
+theme_override_font_sizes/font_size = 7
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Content/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_x8u2a")
+
+[node name="File" type="Label" parent="Content/VBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(285, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("7_e2071")
+theme_override_font_sizes/font_size = 9
+autowrap_mode = 3
+
+[node name="Padding3" type="ColorRect" parent="Content/VBoxContainer2"]
+layout_mode = 2
+
+[node name="WindowBarBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+color = Color(0.321569, 0.721569, 0.8, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+
+[node name="Padding1" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dbxe5")
+text = "REMOTE ARCHIVE ACCESS"
+
+[node name="Padding2" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 1, 1, 0)
+
+[node name="Close" type="TextureButton" parent="HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+texture_normal = ExtResource("4_3ulok")
+texture_pressed = ExtResource("4_3ulok")
+texture_hover = ExtResource("4_3ulok")
+texture_disabled = ExtResource("4_3ulok")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Padding4" type="ColorRect" parent="HBoxContainer"]
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[connection signal="pressed" from="HBoxContainer/Close" to="." method="_on_close_pressed"]
