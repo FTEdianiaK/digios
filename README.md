@@ -2,7 +2,7 @@
 
 *A proof of concept of an interactive OS made in Godot.*
 
-![Game screenshot](APP.png)
+![Game screenshot](APP.jpg)
 
 [License](https://github.com/FTEdianiaK/digios/blob/main/LICENSE) | [Asset License](https://creativecommons.org/licenses/by-sa/4.0/)
 
